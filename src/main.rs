@@ -1,3 +1,11 @@
+use ast::BinaryAST;
+
+mod ast;
+mod token;
+
 fn main() {
-    println!("Hello, world!");
+    let input = "(1 + 2) * (3 - 4)";
+    let ast = BinaryAST::new(input);
+
+    println!("{:#?}", ast);
 }
